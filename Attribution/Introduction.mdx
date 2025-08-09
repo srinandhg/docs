@@ -1,0 +1,63 @@
+# Savoya Attribution – Introduction (Simplified)
+
+## What is Attribution?
+
+Attribution is how **Savoya** connects visits or actions such as product views or purchases back to where they came from, whether that’s a campaign, channel, or referrer. It operates in two main parts: session attribution and event attribution. :contentReference[oaicite:0]index=0
+
+---
+
+## 1. Session Attribution
+
+This determines where a visit originated by looking at elements like the landing page URL, referrer, or tracking IDs. A **session** is identified by up to 60 minutes of site activity, or ends if the source changes. :contentReference[oaicite:1]index=1
+
+Savoya tags visits at several levels:
+
+- **Channel**: The broad source, such as Google, Facebook, Direct, or Organic. :contentReference[oaicite:2]index=2
+- **Campaign**, **Adset**, **Ad**: Extracted from tracking parameters like `cvg_cid`, `utm_campaign`, `cvg_adid`. If none are present, they appear as “(No campaign name)” etc. :contentReference[oaicite:3]index=3
+
+---
+
+## 2. Tracking Parameters
+
+Savoya uses URL tags to track sessions accurately. Examples include:
+
+- `cvg_source=facebook`, `cvg_cid=123`, `cvg_adid=456`
+- `gclid` for Google Ads and standard `utm` parameters for email or SMS
+  These allow mapping sessions back to campaign, ad set, and ad. :contentReference[oaicite:4]index=4
+
+---
+
+## 3. Event Attribution
+
+Event attribution splits credit for actions such as purchases across all sessions in a user’s journey. For example, if someone clicked a search ad, came back via email, and then bought, Savoya assigns the purchase value across those visits. :contentReference[oaicite:5]index=5
+
+---
+
+## 4. Attribution Models
+
+Savoya offers several ways to distribute credit across touchpoints:
+
+| Model                | How Credit Is Assigned                                                                                    |
+| -------------------- | --------------------------------------------------------------------------------------------------------- |
+| **Direct**           | All credit goes to the session where conversion occurred. :contentReference[oaicite:6]index=6             |
+| **First Touch**      | All credit goes to the first touchpoint. :contentReference[oaicite:7]index=7                              |
+| **Last Touch**       | All credit goes to the final touch before conversion. :contentReference[oaicite:8]index=8                 |
+| **Linear**           | Equal credit across all touchpoints. :contentReference[oaicite:9]index=9                                  |
+| **Participation**    | 100% credit to every touchpoint involved. :contentReference[oaicite:10]index=10                           |
+| **J-Shaped**         | 20% to first, 60% to last, 20% split evenly across others. :contentReference[oaicite:11]index=11          |
+| **Inverse J-Shaped** | 60% to first, 20% to last, 20% split across others. :contentReference[oaicite:12]index=12                 |
+| **U-Shaped**         | 40% to first and last each, 20% divided among middle. :contentReference[oaicite:13]index=13               |
+| **Time Decay**       | Closer touchpoints get more credit using a 7-day half-life formula. :contentReference[oaicite:14]index=14 |
+
+All models ignore purely direct visits unless they're the only touches in the journey. Attribution window is fixed at 30 days. :contentReference[oaicite:15]index=15
+
+---
+
+## 5. Savoya vs In-Platform Attribution
+
+- **Savoya (First-Party)** attribution uses your own site data for consistent, cross-channel comparisons, though it can miss ad views or cross-device sessions. :contentReference[oaicite:16]index=16
+- **In-Platform** attribution comes from ad platforms like Facebook or Google, including views and clicks tracked internally. It may be more complete for that platform but isn’t comparable across different channels. :contentReference[oaicite:17]index=17
+
+These differences can lead to mismatches. Each method offers its own visibility and utility depending on context.
+
+---
