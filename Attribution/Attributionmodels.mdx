@@ -1,0 +1,85 @@
+---
+title: "Attribution Models"
+---
+
+## What You’ll Learn
+
+This page walks you through the different ways Savoya can decide which touchpoints in a customer's journey get credit for a conversion. Think of it as different storytelling styles—some give all the credit to the beginning, some to the end, and others share it evenly or with a bias.
+
+---
+
+## Quick Overview
+
+Here’s a snapshot of how different models spread credit across four touchpoints in a conversion series:
+
+| Model                | Touchpoint 1                                             | Touchpoint 2 | Touchpoint 3 | Touchpoint 4 |
+| -------------------- | -------------------------------------------------------- | ------------ | ------------ | ------------ |
+| **First Touch**      | 100%                                                     | 0%           | 0%           | 0%           |
+| **First Touch Paid** | 100%                                                     | 0%           | 0%           | 0%           |
+| **Last Touch**       | 0%                                                       | 0%           | 0%           | 100%         |
+| **Last Touch Paid**  | 0%                                                       | 0%           | 0%           | 100%         |
+| **Linear**           | 25% each                                                 | 25% each     | 25% each     | 25% each     |
+| **Participation**    | 100% each                                                | 100% each    | 100% each    | 100% each    |
+| **J-Shaped**         | 20%                                                      | 10%          | 10%          | 60%          |
+| **Inverse J-Shaped** | 60%                                                      | 10%          | 10%          | 20%          |
+| **U-Shaped**         | 40%                                                      | 10%          | 10%          | 40%          |
+| **Time Decay**       | Varies by time—closer gets more credit (explained below) |              |              |              |
+
+All models skip “Direct” touches—unless the whole journey is just direct hits.\
+Savoya sticks to a fixed 30-day window for attribution. :contentReference[oaicite:0]index=0
+
+---
+
+## Model Breakdown
+
+### **Direct**
+
+All credit goes to the channel of the session that converted. Use this if you just want to know exactly which journey ended in the conversion. :contentReference[oaicite:1]index=1
+
+### **First Touch**
+
+Credit goes entirely to the first touchpoint, paid or organic. Great for spotting how you attract potential customers. :contentReference[oaicite:2]index=2
+
+### **First Touch Paid Only**
+
+Like First Touch, but only if a paid channel starts the journey. If not, it gets labeled “No web touchpoint.” (Ideal to understand paid campaigns' impact.) :contentReference[oaicite:3]index=3
+
+### **Last Touch**
+
+All credit goes to the last touchpoint before conversion. Handy to see which channel brings people over the finish line. :contentReference[oaicite:4]index=4
+
+### **Last Touch Paid Only**
+
+Same idea as Last Touch, but only credits paid touchpoints; else marked “No web touchpoint.” :contentReference[oaicite:5]index=5
+
+### **Linear**
+
+Divide credit equally across all touchpoints. Useful when you want to value every step of the journey. :contentReference[oaicite:6]index=6
+
+### **Participation**
+
+Give 100% to each touchpoint. This means total attributed credit can exceed the actual number of conversions—similar to how in-platform tools sometimes report full credit per channel. :contentReference[oaicite:7]index=7
+
+### **J-Shaped**
+
+Heavier weight on the first and especially the last touch: typically 20% to first, 60% to last, and the remaining 20% split evenly. Works well if you want to highlight both initiation and closure. :contentReference[oaicite:8]index=8
+
+### **Inverse J-Shaped**
+
+Opposite of J-Shaped: 60% to first touch, 20% to last, rest split equally. Use when initial contact matters most. :contentReference[oaicite:9]index=9
+
+### **U-Shaped**
+
+Balances first and last touch: 40% each, with the rest spread across the middle. Ideal if you value both the start and finish equally. :contentReference[oaicite:10]index=10
+
+### **Time Decay**
+
+More recent interactions get more credit, based on how long before the conversion they occurred. It uses a “7-day half-life” formula—touchpoints 7 days earlier get half the weight of same-day interactions. :contentReference[oaicite:11]index=11
+
+---
+
+## Why This Matters
+
+The model you pick all depends on what story you want your marketing data to tell. Use **First Touch** to recognize acquisition sources, **Last Touch** for conversion drivers, or go multi-touch for a deeper, more balanced view. :contentReference[oaicite:12]index=12
+
+---
